@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tekan Tombol Rekam untuk Merekam Kata yang Baru"
+        android:id="@+id/textView1"
+        android:textSize="25dp"
+        android:padding="10dp"
+        android:textColor="@color/colorText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/appIcon"/>
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/appIcon"
+        android:scaleType="centerCrop"
+        android:padding="5dp"
+        android:contentDescription="@null"
+        android:layout_marginTop="34dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView1"/>
+
+    <TextView
+        android:id="@+id/appName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="34dp"
+        android:padding="10dp"
+        android:text="Nama Aplikasi"
+        android:textColor="@color/colorText"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appNick"/>
+
+    <EditText
+        android:id="@+id/appNick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="34dp"
+        android:padding="10dp"
+        android:text="Sebutan Aplikasi"
+        android:textColor="@color/colorText"
+        android:textSize="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appIcon"/>
+
+    <Button
+        android:id="@+id/btnUbah"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#f44262"
+        android:padding="10dp"
+        android:textColor="@color/background"
+        android:text="Ubah"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appName"
+        app:layout_constraintHorizontal_bias="0.2" />
+
+    <Button
+        android:id="@+id/btnRekam"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#f44262"
+        android:padding="10dp"
+        android:textColor="@color/background"
+        android:text="Rekam"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnUbah"
+        app:layout_constraintTop_toBottomOf="@+id/appName"
+        app:layout_constraintHorizontal_bias="0.5" />
+
+
+</android.support.constraint.ConstraintLayout>

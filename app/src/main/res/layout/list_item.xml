@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background"
+    android:descendantFocusability="blocksDescendants"
+    android:padding="10dp">
+
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/appIcon"
+        android:scaleType="centerCrop"
+        android:padding="5dp"
+        android:contentDescription="@null"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:gravity="start|center_vertical"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp"
+        android:id="@+id/LLayout"
+        android:orientation="vertical"
+        app:layout_constraintStart_toEndOf="@id/appIcon"
+        app:layout_constraintEnd_toStartOf="@id/btnEdit">
+
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorText"
+            android:id="@+id/appName"/>
+
+        <TextView android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="15dp"
+            android:gravity="center_vertical"
+            android:textColor="@color/colorText"
+            android:id="@+id/appNick"/>
+    </LinearLayout>
+
+    <Button android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingStart="1dp"
+        android:paddingEnd="1dp"
+        android:background="#f44262"
+        android:textColor="@color/background"
+        android:text="Edit"
+        android:id="@+id/btnEdit"
+        app:layout_constraintEnd_toEndOf="parent"/>
+</android.support.constraint.ConstraintLayout>

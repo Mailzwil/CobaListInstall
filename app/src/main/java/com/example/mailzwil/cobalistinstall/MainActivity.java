@@ -61,8 +61,8 @@ public class MainActivity extends ListeningServiceReal implements View.OnClickLi
                 break;
             case R.id.btnJalan:
                 try {
-                    String keyWord= myDb.getApkNick(keywordpack);
-                    if(!Objects.equals(keyWord,null)) listenKeyword();
+                    boolean keyWord= myDb.checkApkPackage(keywordpack);
+                    if(keyWord) listenKeyword();
                     else{
                         Toast.makeText(this, "Kata Kunci Belum Terisi, " +
                                 "Silahkan Tekan Set Default Data terlebih dahulu", Toast.LENGTH_LONG).show();
